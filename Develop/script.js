@@ -5,13 +5,16 @@ numbers = ["1","2","3","4","5","6","7","8","9","0"];
 specialCharacters = ["!","@","#","$","%","^","&","*"];
 
 function generatePassword(passwordLength,lowercase,uppercase,numbers,characters){
-  let passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
-  let lowercase = prompt("Do you want lowercase letters in your password?");
-  let uppercase = prompt("Do you want uppercase letters in your password?");
-  let numbers = prompt("Do you want any numbers in your password?");
-  let characters = prompt("Do you want any special characters in your password?")
+  let pLenght = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
 
-}
+  if (pLenght < 8 || pLenght > 129){
+    console.log("Invalid Amount");
+  } else {
+    console.log("The length of choise is " + pLenght);
+      }
+    }
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -27,3 +30,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+  //let lowercase = prompt("Do you want lowercase letters in your password?");
+  //let uppercase = prompt("Do you want uppercase letters in your password?");
+  //let numbers = prompt("Do you want any numbers in your password?");
+  //let characters = prompt("Do you want any special characters in your password?");
