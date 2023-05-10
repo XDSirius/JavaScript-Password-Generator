@@ -4,8 +4,13 @@ uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P"
 numbers = ["1","2","3","4","5","6","7","8","9","0"];
 specialCharacters = ["!","@","#","$","%","^","&","*"];
 
-function generatePassword(length,lowercase,uppercase,numbers,characters){
-  console.log("How long do you want your password to be? Choose between 8 and 128 characters")
+function generatePassword(passwordLength,lowercase,uppercase,numbers,characters){
+  let passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
+  let lowercase = prompt("Do you want lowercase letters in your password?");
+  let uppercase = prompt("Do you want uppercase letters in your password?");
+  let numbers = prompt("Do you want any numbers in your password?");
+  let characters = prompt("Do you want any special characters in your password?")
+
 }
 
 // Get references to the #generate element
