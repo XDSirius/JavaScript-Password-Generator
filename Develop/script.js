@@ -5,29 +5,31 @@ numbers = ["1","2","3","4","5","6","7","8","9","0"];
 specialCharacters = ["!","@","#","$","%","^","&","*"];
 
 function generatePassword(passwordLength,lowercase,uppercase,numbers,characters){
-  let pLenght = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
+  passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
 //TAKES DESIRED LENGTH AND CHECKS IF IT MEETS CRITERIA
-  if (pLenght < 8 || pLenght > 129){
+  if (passwordLength < 8 || passwordLength > 129){
     console.log("Invalid Amount");
   } else {
-    return pLenght;
+    return passwordLength;
       }
-    }
+
 //ASK CLIENT IF THEY WANT LOWERCASE LETTERS 
-  let lowercase = prompt("Do you want lowercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
+  lowercase = prompt("Do you want lowercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
   lowercase = lowercase.toUpperCase();
   if (lowercase === "YES" || lowercase === "Y"){
     console.log("There will be lowercase letters in your password");
+    //????????????????????????
   }else if (lowercase ==="NO" || lowercase ==="N"){
     console.log("There will be no lowercase letters in your password!");
   }else{
       console.log("Invalid Input");
     }
 //ASK CLIENT IF THEY WANT UPPERCASE LETTERS 
-  let uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
+  uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
   uppercase = lowercase.toUpperCase();
   if (uppercase === "YES" || uppercase === "Y"){
     console.log("There will be uppercase letters in your password");
+
   }else if (uppercase ==="NO" || uppercase ==="N"){
     console.log("There will be no uppercase letters in your password!");
   }else{
@@ -35,10 +37,11 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     }
 
 //ASK CLIENT IF THEY WANT NUMBERS 
-  let numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' OR 'n' 'no'");
+  numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' OR 'n' 'no'");
   numbers = numbers.toUpperCase();
   if (numbers === "YES" || numbers === "Y"){
     console.log("There will be numbers in your password");
+
   }else if (numbers ==="NO" || numbers ==="N"){
     console.log("There will be no numbers in your password!");
   }else{
@@ -46,15 +49,17 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     }
 
 //ASK CLIENT IF THEY WANT SPECIAL CHARACTERS
-  let characters = prompt("Do you want any special characters in your password?");
+  characters = prompt("Do you want any special characters in your password?");
   characters = characters.toUpperCase();
   if (characters === "YES" || characters === "Y"){
     console.log("There will be characters in your password");
+
   }else if (numbers ==="NO" || numbers ==="N"){
     console.log("There will be at least 1 character  in your password!");
   }else{
       console.log("Invalid Input");
     }
+  }
 
 
 
