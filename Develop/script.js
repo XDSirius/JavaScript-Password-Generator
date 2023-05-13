@@ -4,9 +4,10 @@ uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P"
 numbers = ["1","2","3","4","5","6","7","8","9","0"];
 specialCharacters = ["!","@","#","$","%","^","&","*"];
 
-function generatePassword(passwordLength,lowercase,uppercase,numbers,characters){
-  passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
+//function generatePassword(passwordLength,lowercase,uppercase,numbers,characters){
+
 //TAKES DESIRED LENGTH AND CHECKS IF IT MEETS CRITERIA
+  passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
   if (passwordLength < 8 || passwordLength > 129){
     console.log("Invalid Amount");
   } else {
@@ -18,12 +19,21 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   lowercase = lowercase.toUpperCase();
   if (lowercase === "YES" || lowercase === "Y"){
     console.log("There will be lowercase letters in your password");
-    //????????????????????????
   }else if (lowercase ==="NO" || lowercase ==="N"){
     console.log("There will be no lowercase letters in your password!");
   }else{
       console.log("Invalid Input");
     }
+
+  passwordString = [];
+  for (let x =0; x < desiredAmount; x++){
+    letter = Math.floor(Math.random() * lowercaseAlphabet.length);
+    passwordString = passwordString + letter;
+    return passwordString;
+    }
+    
+
+/*
 //ASK CLIENT IF THEY WANT UPPERCASE LETTERS 
   uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
   uppercase = lowercase.toUpperCase();
@@ -59,9 +69,9 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   }else{
       console.log("Invalid Input");
     }
-  }
+//  }
 
-
+*/
 
 
 // Get references to the #generate element
@@ -79,6 +89,3 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-
-  
