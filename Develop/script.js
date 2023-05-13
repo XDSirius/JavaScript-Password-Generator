@@ -17,43 +17,40 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 
 //ASK CLIENT IF THEY WANT LOWERCASE LETTERS 
   lowercase = prompt("Do you want lowercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
+  //TURNS INPUT TO ALL UPPERCASE
   lowercase = lowercase.toUpperCase();
   if (lowercase === "YES" || lowercase === "Y"){
     console.log("There will be lowercase letters in your password");
+    //ADDS ARRAY TO POOL ARRAY
     pool = pool.concat(lowercaseAlphabet);
+//CALLS FUNCTION TO GET PASSWORD
 
-    passwordWord();
   }else if (lowercase ==="NO" || lowercase ==="N"){
     console.log("There will be no lowercase letters in your password!");
   }else{
       console.log("Invalid Input");
     }
-  function passwordWord(){
-    passwordString = [];
-    for (let x =0; x < desiredAmount; x++){
-      letter = Math.floor(Math.random() * pool.length);
-      passwordString = passwordString + pool[letter];
 
-      }
-      return passwordString;
-    }
-  console.log(passwordString);
-}
+  
+
     
 
-/*
+
 //ASK CLIENT IF THEY WANT UPPERCASE LETTERS 
   uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
   uppercase = lowercase.toUpperCase();
   if (uppercase === "YES" || uppercase === "Y"){
     console.log("There will be uppercase letters in your password");
+    pool = pool.concat(uppercaseAlphabet);
+    passwordWord();
 
   }else if (uppercase ==="NO" || uppercase ==="N"){
     console.log("There will be no uppercase letters in your password!");
   }else{
       console.log("Invalid Input");
     }
-
+  }
+/*
 //ASK CLIENT IF THEY WANT NUMBERS 
   numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' OR 'n' 'no'");
   numbers = numbers.toUpperCase();
@@ -97,3 +94,14 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+//FUNCTION TO ADD STRING TO EMPTY ARRAY DEPENDANT ON WHICH ARRAYS WERE ADDED TO PULL AND THE DESIRED AMOUNT FOR PASSWORD LENGTH
+function passwordWord(){
+  let passwordString = [];
+  for (let x =0; x < desiredAmount; x++){
+    letter = Math.floor(Math.random() * pool.length);
+    passwordString = passwordString + pool[letter];
+
+    }
+    console.log(passwordString);
+    //return passwordString;
+  }
