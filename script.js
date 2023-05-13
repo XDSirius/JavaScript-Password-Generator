@@ -1,4 +1,6 @@
 // Assignment code here
+//THERE IS A CHANCE EVEN IF YOU PUT YES TO NUMBERS THEY WON'T COME OUT?
+
 let lowercaseAlphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"];
 let uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let numbers = ["1","2","3","4","5","6","7","8","9","0"];
@@ -30,6 +32,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     window.alert("There will be no lowercase letters in your password!");
   }else{
       console.log("Invalid Input");
+      return;
     }
 
   
@@ -49,6 +52,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     window.alert("There will be no uppercase letters in your password!");
   }else{
     window.alert("Invalid Input");
+    return;
     }
 
 //ASK CLIENT IF THEY WANT NUMBERS 
@@ -63,6 +67,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     window.alert("There will be no numbers in your password!");
   }else{
     window.alert("Invalid Input");
+    return;
     }
 
 
@@ -77,6 +82,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     window.alert("There will be at least no characters  in your password!");
   }else{
     window.alert("Invalid Input");
+    return;
     }
 
   if ((lowercase === "NO" || lowercase == "N") &&
