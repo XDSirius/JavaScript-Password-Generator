@@ -2,7 +2,7 @@
 let lowercaseAlphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"];
 let uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let numbers = ["1","2","3","4","5","6","7","8","9","0"];
-let specialCharacters = ["!","@","#","$","%","^","&","*"];
+let specialCharacters = [" ","!","#","$","%","&","'","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","\\"];
 let pool =[];
 
 function generatePassword(passwordLength,lowercase,uppercase,numbers,characters){
@@ -56,7 +56,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   if (numbers === "YES" || numbers === "Y"){
     console.log("There will be numbers in your password");
     pool = pool.concat(numbers);
-    passwordWord();
+    
 
   }else if (numbers ==="NO" || numbers ==="N"){
     console.log("There will be no numbers in your password!");
@@ -64,13 +64,14 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
       console.log("Invalid Input");
     }
 
-  }
-  /*
+
 //ASK CLIENT IF THEY WANT SPECIAL CHARACTERS
   characters = prompt("Do you want any special characters in your password?");
   characters = characters.toUpperCase();
   if (characters === "YES" || characters === "Y"){
     console.log("There will be characters in your password");
+    pool = pool.concat(specialCharacters);
+    passwordWord();
 
   }else if (numbers ==="NO" || numbers ==="N"){
     console.log("There will be at least 1 character  in your password!");
@@ -79,7 +80,8 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     }
 //  }
 
-*/
+}
+
 
 
 // Get references to the #generate element
