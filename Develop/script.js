@@ -11,6 +11,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
   if (passwordLength < 8 || passwordLength > 129){
     console.log("Invalid Amount");
+    return;
   } else {
     desiredAmount = passwordLength;
       }
@@ -71,14 +72,22 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   if (characters === "YES" || characters === "Y"){
     console.log("There will be characters in your password");
     pool = pool.concat(specialCharacters);
-    passwordWord();
 
   }else if (numbers ==="NO" || numbers ==="N"){
-    console.log("There will be at least 1 character  in your password!");
+    console.log("There will be at least no characters  in your password!");
   }else{
       console.log("Invalid Input");
     }
-//  }
+
+  if ((lowercase === "NO" || lowercase == "N") &&
+      (uppercase === "NO" || uppercase == "N") &&
+      (numbers === "NO" || numbers == "N") &&
+      (characters === "NO" || characters == "N")){
+        console.log("You must select at least one character");
+        return;
+      }
+
+
 
 }
 
