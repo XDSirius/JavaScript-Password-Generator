@@ -9,7 +9,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 
 //TAKES DESIRED LENGTH AND CHECKS IF IT MEETS CRITERIA
   passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
-  if (passwordLength < 8 || passwordLength > 129){
+  if (passwordLength < 8 || passwordLength > 128){
     console.log("Invalid Amount");
     return;
   } else {
