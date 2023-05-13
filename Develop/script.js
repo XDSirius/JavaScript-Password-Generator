@@ -1,8 +1,9 @@
 // Assignment code here
-lowercaseAlphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"];
-uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-numbers = ["1","2","3","4","5","6","7","8","9","0"];
-specialCharacters = ["!","@","#","$","%","^","&","*"];
+let lowercaseAlphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"];
+let uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+let numbers = ["1","2","3","4","5","6","7","8","9","0"];
+let specialCharacters = ["!","@","#","$","%","^","&","*"];
+let pool =[];
 
 function generatePassword(passwordLength,lowercase,uppercase,numbers,characters){
 
@@ -19,6 +20,8 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   lowercase = lowercase.toUpperCase();
   if (lowercase === "YES" || lowercase === "Y"){
     console.log("There will be lowercase letters in your password");
+    pool = pool.concat(lowercaseAlphabet);
+
     passwordWord();
   }else if (lowercase ==="NO" || lowercase ==="N"){
     console.log("There will be no lowercase letters in your password!");
@@ -29,7 +32,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     passwordString = [];
     for (let x =0; x < desiredAmount; x++){
       letter = Math.floor(Math.random() * lowercaseAlphabet.length);
-      passwordString = passwordString + letter;
+      passwordString = passwordString + lowercaseAlphabet[letter];
       return passwordString;
       }
     }
