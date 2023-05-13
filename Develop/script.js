@@ -42,20 +42,21 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   if (uppercase === "YES" || uppercase === "Y"){
     console.log("There will be uppercase letters in your password");
     pool = pool.concat(uppercaseAlphabet);
-    passwordWord();
+
 
   }else if (uppercase ==="NO" || uppercase ==="N"){
     console.log("There will be no uppercase letters in your password!");
   }else{
       console.log("Invalid Input");
     }
-  }
-/*
+
 //ASK CLIENT IF THEY WANT NUMBERS 
   numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' OR 'n' 'no'");
   numbers = numbers.toUpperCase();
   if (numbers === "YES" || numbers === "Y"){
     console.log("There will be numbers in your password");
+    pool = pool.concat(numbers);
+    passwordWord();
 
   }else if (numbers ==="NO" || numbers ==="N"){
     console.log("There will be no numbers in your password!");
@@ -63,6 +64,8 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
       console.log("Invalid Input");
     }
 
+  }
+  /*
 //ASK CLIENT IF THEY WANT SPECIAL CHARACTERS
   characters = prompt("Do you want any special characters in your password?");
   characters = characters.toUpperCase();
