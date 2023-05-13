@@ -31,10 +31,11 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   function passwordWord(){
     passwordString = [];
     for (let x =0; x < desiredAmount; x++){
-      letter = Math.floor(Math.random() * lowercaseAlphabet.length);
-      passwordString = passwordString + lowercaseAlphabet[letter];
-      return passwordString;
+      letter = Math.floor(Math.random() * pool.length);
+      passwordString = passwordString + pool[letter];
+
       }
+      return passwordString;
     }
   console.log(passwordString);
 }
