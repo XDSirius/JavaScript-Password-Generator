@@ -78,18 +78,19 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     window.alert("There will be characters in your password");
     pool = pool.concat(specialCharacters);
 
-  }else if (numbers ==="NO" || numbers ==="N"){
+  }else if (characters ==="NO" || characters ==="N"){
     window.alert("There will be at least no characters  in your password!");
   }else{
     window.alert("Invalid Input");
     return;
     }
 
+
   if ((lowercase === "NO" || lowercase == "N") &&
       (uppercase === "NO" || uppercase == "N") &&
       (numbers === "NO" || numbers == "N") &&
       (characters === "NO" || characters == "N")){
-        window.alertt("You must select at least one character");
+        window.alert("You must select at least one character");
         return;
       }else{
         return passwordWord();
