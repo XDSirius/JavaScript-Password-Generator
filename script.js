@@ -10,7 +10,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 //TAKES DESIRED LENGTH AND CHECKS IF IT MEETS CRITERIA
   passwordLength = prompt("How long do you want your password to be? Choose between 8 and 128 characters");
   if (passwordLength < 8 || passwordLength > 128){
-    alert("Invalid Amount");
+    window.alert("Invalid Amount");
     return;
   } else {
     desiredAmount = passwordLength;
@@ -27,7 +27,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 //CALLS FUNCTION TO GET PASSWORD
 
   }else if (lowercase ==="NO" || lowercase ==="N"){
-    alert("There will be no lowercase letters in your password!");
+    window.alert("There will be no lowercase letters in your password!");
   }else{
       console.log("Invalid Input");
     }
@@ -41,28 +41,28 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
   uppercase = lowercase.toUpperCase();
   if (uppercase === "YES" || uppercase === "Y"){
-    alert("There will be uppercase letters in your password");
+    window.alert("There will be uppercase letters in your password");
     pool = pool.concat(uppercaseAlphabet);
 
 
   }else if (uppercase ==="NO" || uppercase ==="N"){
-    alert("There will be no uppercase letters in your password!");
+    window.alert("There will be no uppercase letters in your password!");
   }else{
-      alert("Invalid Input");
+    window.alert("Invalid Input");
     }
 
 //ASK CLIENT IF THEY WANT NUMBERS 
   numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' OR 'n' 'no'");
   numbers = numbers.toUpperCase();
   if (numbers === "YES" || numbers === "Y"){
-    alert("There will be numbers in your password");
+    window.alert("There will be numbers in your password");
     pool = pool.concat(numbers);
     
 
   }else if (numbers ==="NO" || numbers ==="N"){
-    alert("There will be no numbers in your password!");
+    window.alert("There will be no numbers in your password!");
   }else{
-      alert("Invalid Input");
+    window.alert("Invalid Input");
     }
 
 
@@ -70,20 +70,20 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   characters = prompt("Do you want any special characters in your password?");
   characters = characters.toUpperCase();
   if (characters === "YES" || characters === "Y"){
-    alert("There will be characters in your password");
+    window.alert("There will be characters in your password");
     pool = pool.concat(specialCharacters);
 
   }else if (numbers ==="NO" || numbers ==="N"){
-    alert("There will be at least no characters  in your password!");
+    window.alert("There will be at least no characters  in your password!");
   }else{
-      alert("Invalid Input");
+    window.alert("Invalid Input");
     }
 
   if ((lowercase === "NO" || lowercase == "N") &&
       (uppercase === "NO" || uppercase == "N") &&
       (numbers === "NO" || numbers == "N") &&
       (characters === "NO" || characters == "N")){
-        alert("You must select at least one character");
+        window.alertt("You must select at least one character");
         return;
       }else{
         return passwordWord();
