@@ -85,6 +85,8 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
       (characters === "NO" || characters == "N")){
         console.log("You must select at least one character");
         return;
+      }else{
+        return passwordWord();
       }
 
 
@@ -116,6 +118,6 @@ function passwordWord(){
     passwordString = passwordString + pool[letter];
 
     }
-    console.log(passwordString);
-    //return passwordString;
+    
+    return passwordString;
   }
