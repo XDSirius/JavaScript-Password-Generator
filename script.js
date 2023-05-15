@@ -14,7 +14,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   if (passwordLength < 8 || passwordLength > 128){
     window.alert("Invalid Amount");
     return;
-
+//CHECKS IF INPUT IS A NUMBER OR NOT
   }else if (isNaN(passwordLength)){
     window.alert("Not a number");
     return;
@@ -28,7 +28,6 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   //TURNS INPUT TO ALL UPPERCASE
   lowercase = lowercase.toUpperCase();
   if (lowercase === "YES" || lowercase === "Y"){
-    //console.log("There will be lowercase letters in your password");
     //ADDS ARRAY TO POOL ARRAY
     pool = pool.concat(lowercaseAlphabet);
   }else if (lowercase ==="NO" || lowercase ==="N"){
@@ -47,10 +46,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
   uppercase = lowercase.toUpperCase();
   if (uppercase === "YES" || uppercase === "Y"){
-    //window.alert("There will be uppercase letters in your password");
     pool = pool.concat(uppercaseAlphabet);
-
-
   }else if (uppercase ==="NO" || uppercase ==="N"){
     window.alert("There will be no uppercase letters in your password!");
   }else{
@@ -62,10 +58,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
   numbers = numbers.toUpperCase();
   if (numbers === "YES" || numbers === "Y"){
-   // window.alert("There will be numbers in your password");
     pool = pool.concat(numbers);
-    
-
   }else if (numbers ==="NO" || numbers ==="N"){
     window.alert("There will be no numbers in your password!");
   }else{
@@ -78,16 +71,13 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   characters = prompt("Do you want any special characters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
   characters = characters.toUpperCase();
   if (characters === "YES" || characters === "Y"){
-    //window.alert("There will be characters in your password");
     pool = pool.concat(specialCharacters);
-
   }else if (characters ==="NO" || characters ==="N"){
     window.alert("There will be at least no special characters  in your password!");
   }else{
     window.alert("Invalid Input");
     return;
     }
-
 
   if ((lowercase === "NO" || lowercase == "N") &&
       (uppercase === "NO" || uppercase == "N") &&
@@ -98,9 +88,6 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
       }else{
         return passwordWord();
       }
-
-
-
 }
 
 
@@ -113,8 +100,6 @@ function passwordWord(){
     }
     return passwordString;
   }
-
-  
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
