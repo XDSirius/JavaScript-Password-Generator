@@ -19,14 +19,14 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
       }
 
 //ASK CLIENT IF THEY WANT LOWERCASE LETTERS 
-  lowercase = prompt("Do you want lowercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
+  lowercase = prompt("Do you want lowercase letters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
   //TURNS INPUT TO ALL UPPERCASE
   lowercase = lowercase.toUpperCase();
   if (lowercase === "YES" || lowercase === "Y"){
     //console.log("There will be lowercase letters in your password");
     //ADDS ARRAY TO POOL ARRAY
     pool = pool.concat(lowercaseAlphabet);
-//CALLS FUNCTION TO GET PASSWORD
+
 
   }else if (lowercase ==="NO" || lowercase ==="N"){
     window.alert("There will be no lowercase letters in your password!");
@@ -41,7 +41,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 
 
 //ASK CLIENT IF THEY WANT UPPERCASE LETTERS 
-  uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
+  uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
   uppercase = lowercase.toUpperCase();
   if (uppercase === "YES" || uppercase === "Y"){
     //window.alert("There will be uppercase letters in your password");
@@ -56,7 +56,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     }
 
 //ASK CLIENT IF THEY WANT NUMBERS 
-  numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' OR 'n' 'no'");
+  numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
   numbers = numbers.toUpperCase();
   if (numbers === "YES" || numbers === "Y"){
    // window.alert("There will be numbers in your password");
@@ -72,7 +72,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 
 
 //ASK CLIENT IF THEY WANT SPECIAL CHARACTERS
-  characters = prompt("Do you want any special characters in your password?");
+  characters = prompt("Do you want any special characters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
   characters = characters.toUpperCase();
   if (characters === "YES" || characters === "Y"){
     //window.alert("There will be characters in your password");
