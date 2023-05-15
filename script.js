@@ -1,5 +1,5 @@
 // Assignment code here
-//THERE IS A CHANCE EVEN IF YOU PUT YES TO NUMBERS THEY WON'T COME OUT?
+
 
 let lowercaseAlphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"];
 let uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
@@ -44,7 +44,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' OR 'n' 'no'");
   uppercase = lowercase.toUpperCase();
   if (uppercase === "YES" || uppercase === "Y"){
-    window.alert("There will be uppercase letters in your password");
+    //window.alert("There will be uppercase letters in your password");
     pool = pool.concat(uppercaseAlphabet);
 
 
@@ -59,7 +59,7 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' OR 'n' 'no'");
   numbers = numbers.toUpperCase();
   if (numbers === "YES" || numbers === "Y"){
-    window.alert("There will be numbers in your password");
+   // window.alert("There will be numbers in your password");
     pool = pool.concat(numbers);
     
 
@@ -75,11 +75,11 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   characters = prompt("Do you want any special characters in your password?");
   characters = characters.toUpperCase();
   if (characters === "YES" || characters === "Y"){
-    window.alert("There will be characters in your password");
+    //window.alert("There will be characters in your password");
     pool = pool.concat(specialCharacters);
 
   }else if (characters ==="NO" || characters ==="N"){
-    window.alert("There will be at least no characters  in your password!");
+    window.alert("There will be at least no special characters  in your password!");
   }else{
     window.alert("Invalid Input");
     return;
