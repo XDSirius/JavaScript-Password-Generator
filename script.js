@@ -14,7 +14,12 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   if (passwordLength < 8 || passwordLength > 128){
     window.alert("Invalid Amount");
     return;
-  } else {
+
+  }else if (isNaN(passwordLength)){
+    window.alert("Not a number");
+    return;
+
+  }else {
     desiredAmount = passwordLength;
       }
 
@@ -26,8 +31,6 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     //console.log("There will be lowercase letters in your password");
     //ADDS ARRAY TO POOL ARRAY
     pool = pool.concat(lowercaseAlphabet);
-
-
   }else if (lowercase ==="NO" || lowercase ==="N"){
     window.alert("There will be no lowercase letters in your password!");
   }else{
@@ -107,9 +110,7 @@ function passwordWord(){
   for (let x =0; x < desiredAmount; x++){
     letter = Math.floor(Math.random() * pool.length);
     passwordString = passwordString + pool[letter];
-
     }
-    
     return passwordString;
   }
 
