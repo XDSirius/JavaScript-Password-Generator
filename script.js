@@ -101,6 +101,19 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 }
 
 
+//FUNCTION TO ADD STRING TO EMPTY ARRAY DEPENDANT ON WHICH ARRAYS WERE ADDED TO PULL AND THE DESIRED AMOUNT FOR PASSWORD LENGTH
+function passwordWord(){
+  let passwordString = [];
+  for (let x =0; x < desiredAmount; x++){
+    letter = Math.floor(Math.random() * pool.length);
+    passwordString = passwordString + pool[letter];
+
+    }
+    
+    return passwordString;
+  }
+
+  
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -116,15 +129,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//FUNCTION TO ADD STRING TO EMPTY ARRAY DEPENDANT ON WHICH ARRAYS WERE ADDED TO PULL AND THE DESIRED AMOUNT FOR PASSWORD LENGTH
-function passwordWord(){
-  let passwordString = [];
-  for (let x =0; x < desiredAmount; x++){
-    letter = Math.floor(Math.random() * pool.length);
-    passwordString = passwordString + pool[letter];
-
-    }
-    
-    return passwordString;
-  }
