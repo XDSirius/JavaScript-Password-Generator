@@ -1,6 +1,3 @@
-// Assignment code here
-
-
 let lowercaseAlphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","o","p","q","r","s","t","u","v","w","x","y","z"];
 let uppercaseAlphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let numbers = ["1","2","3","4","5","6","7","8","9","0"];
@@ -18,15 +15,14 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
   }else if (isNaN(passwordLength)){
     window.alert("Not a number");
     return;
-
   }else {
     desiredAmount = passwordLength;
       }
 
 //ASK CLIENT IF THEY WANT LOWERCASE LETTERS 
-  lowercase = prompt("Do you want lowercase letters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
-  //TURNS INPUT TO ALL UPPERCASE
-  lowercase = lowercase.toUpperCase();
+  lowercase = prompt("Do you want lowercase letters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO").toUpperCase();
+
+  //lowercase = lowercase.toUpperCase();
   if (lowercase === "YES" || lowercase === "Y"){
     //ADDS ARRAY TO POOL ARRAY
     pool = pool.concat(lowercaseAlphabet);
@@ -37,14 +33,9 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
       return;
     }
 
-  
-
-    
-
-
 //ASK CLIENT IF THEY WANT UPPERCASE LETTERS 
-  uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
-  uppercase = lowercase.toUpperCase();
+  uppercase = prompt("Do you want uppercase letters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO").toUpperCase();
+
   if (uppercase === "YES" || uppercase === "Y"){
     pool = pool.concat(uppercaseAlphabet);
   }else if (uppercase ==="NO" || uppercase ==="N"){
@@ -55,8 +46,8 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     }
 
 //ASK CLIENT IF THEY WANT NUMBERS 
-  numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
-  numbers = numbers.toUpperCase();
+  numbers = prompt("Do you want any numbers in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO").toUpperCase();
+
   if (numbers === "YES" || numbers === "Y"){
     pool = pool.concat(numbers);
   }else if (numbers ==="NO" || numbers ==="N"){
@@ -68,8 +59,8 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
 
 
 //ASK CLIENT IF THEY WANT SPECIAL CHARACTERS
-  characters = prompt("Do you want any special characters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO");
-  characters = characters.toUpperCase();
+  characters = prompt("Do you want any special characters in your password? Type 'y' or 'yes' for YES. Type 'n' or 'no' for NO").toUpperCase();
+
   if (characters === "YES" || characters === "Y"){
     pool = pool.concat(specialCharacters);
   }else if (characters ==="NO" || characters ==="N"){
@@ -78,7 +69,8 @@ function generatePassword(passwordLength,lowercase,uppercase,numbers,characters)
     window.alert("Invalid Input");
     return;
     }
-
+    
+//CHECKS IF ALL CRITERIA WAS SELECTED AS NO 
   if ((lowercase === "NO" || lowercase == "N") &&
       (uppercase === "NO" || uppercase == "N") &&
       (numbers === "NO" || numbers == "N") &&
